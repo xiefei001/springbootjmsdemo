@@ -11,7 +11,6 @@ import javax.jms.Topic;
  * Created by xie on 2016/5/10.
  */
 
-@Component
 public class Producer implements CommandLineRunner{
 
    // @Autowired

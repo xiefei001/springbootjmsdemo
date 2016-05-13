@@ -8,16 +8,16 @@ import javax.jms.JMSException;
 import javax.jms.TextMessage;
 
 /**
- * Created by xie on 2016/5/10.
+ * Created by xie on 2016/5/13.
  */
 @Component
-public class Consumer {
+public class ConsumerSecond {
 
-    private static final Logger LOG = Logger.getLogger(Consumer.class);
+    private static final Logger LOG = Logger.getLogger(ConsumerSecond.class);
 
     @JmsListener(destination = "audio.konserver.topic")
     public void receiveTopic(TextMessage text) throws InterruptedException, JMSException {
-        //Thread.sleep(1000);
+        //Thread.sleep(500);
         LOG.info("receive message: " + text.getText());
     }
 }
