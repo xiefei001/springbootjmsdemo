@@ -38,6 +38,7 @@ public class Application {
             executorService.execute(() ->{
                 LOG.info("send message : " + j);
                 jmsTemplate.convertAndSend("audio.konserver.topic", "hello world " + j);
+                jmsTemplate.convertAndSend("audio.konserver.topic_1", "hello world " + j);
             });
         }
 

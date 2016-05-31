@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import javax.jms.JMSException;
 import javax.jms.TextMessage;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by xie on 2016/5/10.
@@ -19,5 +20,7 @@ public class Consumer {
     public void receiveTopic(TextMessage text) throws InterruptedException, JMSException {
         //Thread.sleep(1000);
         LOG.info("receive message: " + text.getText());
+        TimeUnit.SECONDS.sleep(2);
+        LOG.info("finisch receive message: " + text.getText());
     }
 }
